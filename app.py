@@ -1,3 +1,16 @@
+pip install langchain==0.0.184
+pip install PyPDF2==3.0.1
+pip install python-dotenv==1.0.0
+pip install streamlit==1.18.1
+#openai==0.27.6
+pip install faiss-cpu==1.7.4
+
+# uncomment to use huggingface llms
+pip install huggingface-hub==0.14.1
+
+# uncomment to use instructor embeddings
+pip install InstructorEmbedding==1.0.1
+pip install sentence-transformers==2.2.2
 import streamlit as st
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
