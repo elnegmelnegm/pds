@@ -1,3 +1,10 @@
+from setuptools import setup, find_packages
+
+# Read the contents of the requirements.txt file
+with open("requirements.txt") as f:
+    requirements = [line.strip() for line in f.readlines() if not line.startswith("-f")]
+
+
 #pip install langchain==0.0.184
 #pip install PyPDF2==3.0.1
 #pip install python-dotenv==1.0.0
