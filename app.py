@@ -4,14 +4,6 @@ from setuptools import setup, find_packages
 with open("requirements.txt") as f:
     requirements = [line.strip() for line in f.readlines() if not line.startswith("-f")]
 
-
-#pip install langchain==0.0.184
-#pip install PyPDF2==3.0.1
-#pip install python-dotenv==1.0.0
-#pip install streamlit==1.18.1
-#openai==0.27.6
-#pip install faiss-cpu==1.7.4
-
 # uncomment to use huggingface llms
 #pip install huggingface-hub==0.14.1
 
@@ -63,7 +55,7 @@ def get_conversation_chain(vectorstore):
     repo_id = "tiiuae/falcon-7b-instruct"
     llm = HuggingFaceHub(huggingfacehub_api_token=HUGGINGFACE_API_TOKEN, 
                      repo_id=repo_id, 
-                     model_kwargs={"temperature":0.7, "max_new_tokens":700})
+                     model_kwargs={"temperature":0.2, "max_new_tokens":700})
     
     memory = ConversationBufferMemory(
         memory_key='chat_history', return_messages=True)
