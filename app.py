@@ -53,7 +53,7 @@ def get_conversation_chain(vectorstore):
     #llm = ChatOpenAI()
     #llm = HuggingFaceHub(repo_id="google/flan-t5-xl", model_kwargs={"temperature":0.5, "max_length":512})
     repo_id = "tiiuae/falcon-7b-instruct"
-    llm = HuggingFaceHub(huggingfacehub_api_token=HUGGINGFACE_API_TOKEN, 
+    llm = HuggingFaceHub(huggingfacehub_api_token=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, 
                      repo_id=repo_id, 
                      model_kwargs={"temperature":0.2, "max_new_tokens":700})
     
